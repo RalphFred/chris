@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'Timeburner';
+  src: url('assets/timeburnernormal.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'Sharp Sans';
+  src: url('assets/SharpSans.otf') format('truetype');
+}
+
+:root{
+  --dark: #2d2e2f;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+nav{
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Sharp Sans';
+}
+
+.nav--logo img{
+  width: 180px; 
+}
+
+
+.nav--desktop{
+  display: none;
+}
+
+
+/* --------------------------- HERO SECTION ------------------------------ */
+.hero{
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--header{
+  font-family: 'Timeburner';
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 18px;
+}
+
+.hero--text{
+  margin-bottom: 36px;
+  font-family: 'Sharp Sans';
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.hero--text br{
+  display: none;
+}
+
+.hero--buttons{
+  display: flex; 
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 36px;
+} 
+
+.hero--buttons button{
+  width: 48%;
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-family: 'Sharp Sans';
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.hero--buttons button:nth-child(1){
+  background: var(--dark);
+  color: #fff;
+  border: 1px solid var(--dark);
+}
+
+.hero--buttons button:nth-child(2){
+  background: #fff;
+  color: var(--dark);
+  border: 1px solid var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero--buttons button:nth-child(2) img{
+  margin-right: 6px;
+  width: 18px;
+}
+
+.hero--extras{
+  background: #EEEEEE;
+  display: flex;
+  font-family: 'Sharp Sans';
+  font-size: 14px;
+  border-radius: 15px;
+  margin-bottom: 36px;
+}
+
+.hero--extras div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero--extras img{
+  width: 120px;
+  margin-right: 12px;
+}
+
+.hero--extras span:nth-child(1){
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.hero .right img{
+  width: 100%;
+}
+
+
+
+
+@media screen and (min-width: 540px) {
+  nav{
+    padding: 24px 64px;
+  }
+
+  .nav--logo img{
+    width: 225px; 
+  }
+
+  .nav--desktop{
+    display: flex;
+    font-size: 18px;
+  }
+
+  .nav--desktop li{
+    padding: 8px;
+    margin: 4px 12px;
+    font-weight: 800;
+  }
+
+  .nav--desktop li:nth-child(1){
+    margin-left: 0;
+  }
+
+  .nav--desktop li:last-child{
+    margin-right: 0;
+  }
+
+
+  /* -------------------------- HERO SECTION ------------------------------------ */
+  .hero{
+    padding: 0 64px 24px 64px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero .left{
+    width: 65%;
+  }
+
+  .hero--header{
+    font-size: 92px;
+    line-height: 82px;
+    font-weight: 500;
+  }
+
+  .hero--text{
+    margin-bottom: 24px;
+    font-family: 'Sharp Sans';
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: capitalize;
+  }
+
+  .hero--text br{
+    display: block;
+  }
+
+  .hero--buttons{
+    justify-content: flex-start;
+  } 
+
+  .hero--buttons button{
+    width: 200px;
+    padding: 12px;
+    font-size: 20px;
+  }
+
+  .hero--buttons button:nth-child(1){
+    margin-right: 24px;
+  }
+
+  .hero--extras{
+    margin-bottom: 0;
+    width: 600px;
+    font-size: 16px;
+  }
+  
+  .hero--extras img{
+    width: 150px;
+  }
+  
+  .hero--extras span:nth-child(1){
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  .hero .right{
+    width: 35%;
+  }
+
+  .hero .right img{
+    width: 100%;
+  }
+
+}
