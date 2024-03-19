@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <div class="loader">
+      <img src="assets/preloader.jpg" alt="image" class="loader--img">
+      <h1 class="counter">0</h1>
+    </div>
+
     <nav>
       <div class="nav--logo">
         <img src="/assets/logo.svg" alt="" />
@@ -59,7 +65,7 @@
 
     <div class="about">
       <div class="left">
-        <img src="assets/aboutImg.png" alt="" />
+        <img src="assets/aboutImg.png" alt="" class="about--img"/>
       </div>
       <div class="right">
         <h2 class="about--header">About Us</h2>
@@ -171,6 +177,8 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="
+    https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
