@@ -35,7 +35,7 @@ body{
 }
 
 .loader img{
-  width: 300px;
+  width: 150px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -358,6 +358,10 @@ footer{
 
 
 @media screen and (min-width: 768px) {
+  .loader img{
+    width: 300px;
+  }
+
   nav{
     padding: 24px 64px;
   }
@@ -599,7 +603,7 @@ footer{
   .services .top{
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 56px;
+    margin-bottom: 72px;
   }
 
   .services--header{
@@ -635,7 +639,7 @@ footer{
   .portfolio .top{
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
 
   .portfolio--header{
@@ -687,16 +691,21 @@ footer{
   footer{
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 8rem;
+    padding: 4rem 8rem;
   }
 
   .footer--logo{
     width: 280px;
   }
 
+  .footer--logo img{
+    margin-bottom: 64px;
+  }
+
   .footer--links{
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 0;
   }
 
   .footer--links ul{
@@ -705,5 +714,9 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 0;
+  }
+
+  .footer--links li{
+    margin-top: 24px;
   }
 }
