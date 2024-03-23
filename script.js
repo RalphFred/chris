@@ -12,6 +12,51 @@ function startLoader() {
         transformOrigin: "bottom"
       })
       document.body.style.overflow = ''
+
+      gsap.from(".nav--logo", 2, {
+        x: "-100%",
+        opacity: 0,
+        ease: "power4.out",
+      })
+
+      gsap.from(".nav--desktop", 2, {
+        x: "100%",
+        opacity: 0,
+        ease: "power4.out",
+      })
+
+      gsap.from(".hero--header", 2, {
+        x: "-100%",
+        opacity: 0,
+        ease: "power4.out",
+      })
+
+      gsap.from(".hero--text", 1.75, {
+        x: "-100%",
+        opacity: 0,
+        delay: .25,
+        ease: "power4.out",
+      })
+
+      gsap.from(".hero--buttons button", 2, {
+        y: "100%",
+        stagger: .5,
+        ease: "power4.out",
+        opacity: 0,
+      })
+
+      gsap.from(".hero--extras", 2, {
+        y: "100%",
+        ease: "power4.out",
+        opacity: 0,
+      })
+
+      gsap.from(".hero--img", 2, {
+        x: "100%",
+        rotation: 45,
+        opacity: 0,
+        ease: "power4.out"
+      })
       return ;
     }
 
@@ -37,7 +82,11 @@ function startLoader() {
   updateCounter();
 }
 
-// startLoader();
+startLoader();
+
+gsap.from(".nav--logo", .5, {
+  x: -600,
+})
 
 gsap.from(".about--img", 2, {
   scrollTrigger: ".about--header",
@@ -94,36 +143,42 @@ gsap.from(".card", 1, {
   scrollTrigger: ".card",
 })
 
-gsap.from(".img1", 1, {
-  scrollTrigger: ".img1",
-  y: "100%",
-  opacity: 0,
-  ease: "power4.out",
-})
+function applyAnimations() {
+  if (window.matchMedia('(min-width: 1024px)').matches) {
+    gsap.from(".img1", 1, {
+      scrollTrigger: ".img2",
+      y: "100%",
+      opacity: 0,
+      ease: "power4.out",
+      delay: .5,
+    })
+    
+    gsap.from(".img2", 1, {
+      scrollTrigger: ".img2",
+      x: "100%",
+      opacity: 0,
+      ease: "power4.out",
+      delay: .5,
+    })
+    
+    gsap.from(".img3", 1, {
+      scrollTrigger: ".img2",
+      y: "100%",
+      opacity: 0,
+      ease: "power4.out",
+      delay: .5,
+    })
+    
+    gsap.from(".img4", 1, {
+      scrollTrigger: ".img2",
+      x: "100%",
+      opacity: 0,
+      ease: "power4.out",
+      delay: .5,
+    })
+  } else {
 
-gsap.from(".img2", 1, {
-  scrollTrigger: ".img2",
-  x: "100%",
-  opacity: 0,
-  ease: "power4.out",
-})
+  }
+}
 
-gsap.from(".img3", 1, {
-  scrollTrigger: ".img3",
-  y: "100%",
-  opacity: 0,
-  ease: "power4.out",
-})
-
-gsap.from(".img4", 1, {
-  scrollTrigger: ".img4",
-  x: "100%",
-  opacity: 0,
-  ease: "power4.out",
-})
-
-
-// gsap.from(".nav--logo", .5, {
-//   scrollTrigger: ".nav--logo",
-//   x: -600,
-// })
+applyAnimations();
