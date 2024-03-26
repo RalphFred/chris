@@ -209,7 +209,7 @@ nav{
   text-transform: uppercase;
   font-size: 48px;
   line-height: 48px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .hero--text{
@@ -289,6 +289,9 @@ nav{
   width: 100%;
 }
 
+
+
+/* ---------------------------------- ABOUT --------------------------- */
 .about{
   padding: 24px 16px;
   display: flex;
@@ -303,7 +306,7 @@ nav{
 .about--header{
   font-family: 'Timeburner';
   font-size: 42px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .about--text {
@@ -325,7 +328,8 @@ nav{
   color: #fff;
   border: 1px solid var(--dark);
   width: 48%;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+  cursor: pointer;
 }
 
 .services{
@@ -340,7 +344,7 @@ nav{
 .services--header{
   font-family: 'Timeburner';
   font-size: 42px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .services--text {
@@ -364,7 +368,7 @@ nav{
 }
 
 .services .bottom img{
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   height: 80px;
 }
 
@@ -377,6 +381,8 @@ nav{
   font-family: 'Sharp Sans';
   font-size: 14px;
 }
+
+/* -------------------------- PORTFOLIO -------------------------- */
 
 .portfolio{
   padding: 24px 16px;
@@ -437,8 +443,6 @@ nav{
   display: block;
 }
 
-
-
 .contact{
   padding: 24px 16px;
   display: flex;
@@ -459,7 +463,7 @@ nav{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 24px;
 }
 
 .contact ul li img{
@@ -487,6 +491,7 @@ nav{
   border: 1px solid #9d9d9d;
   outline: none;
   border-radius: 8px;
+  font-family: 'Sharp Sans';
 }
 
 .contact--form input:focus{
@@ -500,6 +505,7 @@ nav{
   outline: none;
   border-radius: 8px;
   height: 200px;
+  font-family: 'Sharp Sans';
 }
 
 .contact--form textarea:focus{
@@ -518,6 +524,7 @@ nav{
   border: 1px solid var(--dark);
   width: 48%;
   margin-bottom: 24px;
+  cursor: pointer;
 } 
 
 
@@ -525,7 +532,7 @@ footer{
   background: var(--dark);
   color: #fff;
   font-family: 'Sharp Sans';
-  padding: 24px 16px;
+  padding: 48px 16px;
   display: flex;
   flex-direction: column;
 }
@@ -543,9 +550,6 @@ footer{
   flex-direction: column;
 }
 
-.footer--links ul{
-  margin-bottom: 24px;
-}
 
 .footer--links li{
   margin-top: 4px;
@@ -567,7 +571,7 @@ footer{
   }
 
   .hero {
-    padding: 0 64px 24px 64px;
+    padding: 36px 64px;
   }
 
   .hero--header {
@@ -601,7 +605,7 @@ footer{
   }
 
   .about{
-    padding: 24px 64px;
+    padding: 36px 64px;
   }
 
   .about .left{
@@ -618,7 +622,7 @@ footer{
   }
   
   .about--text {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     font-size: 20px;
   }
 
@@ -627,7 +631,7 @@ footer{
   }
 
   .services{
-    padding: 24px 64px;
+    padding: 36px 64px;
   }
 
   .services--header{
@@ -635,7 +639,7 @@ footer{
   }
   
   .services--text {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     font-size: 20px;
   }
 
@@ -645,7 +649,7 @@ footer{
 
   .services .bottom{
     grid-template-columns: auto auto;
-    gap: 2rem;
+    gap: 4rem;
   }
   
   .services .bottom .card{
@@ -667,7 +671,7 @@ footer{
   }
 
   .portfolio{
-    padding: 24px 64px;
+    padding: 36px 64px;
   }
   
   .portfolio .top .left p{
@@ -680,8 +684,7 @@ footer{
   }
   
   .portfolio--text {
-    font-size: 18px;
-    line-height: 36px;
+    font-size: 20px;
   }
 
   .portfolio--text br{
@@ -693,7 +696,7 @@ footer{
   }
 
   .contact{
-    padding: 24px 64px;
+    padding: 36px 64px;
   }
   
   .contact--header{
@@ -702,7 +705,7 @@ footer{
   }
 
   footer{
-    padding: 24px 64px;
+    padding: 48px 64px;
   }
 }
 
@@ -776,6 +779,7 @@ footer{
     width: 200px;
     padding: 12px;
     font-size: 20px;
+    cursor: pointer;
   }
 
   .hero--buttons button:nth-child(1){
@@ -916,24 +920,33 @@ footer{
 
   .left{
     width: 50%;
-    font-size: 20px;
+    font-size: 18px;
   }
-
- 
 
   .contact--form{
     width: 50%;
     margin-top: 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .contact--form label{
     margin-bottom: 1rem;
   }
-
-  .contact--form input, textarea{
-    padding: 16px;
+  
+  .contact--form input{
+    padding: 12px;
   }
+
+  .contact--form textarea{
+    height: 250px;
+  }
+
+  .contact--form button{
+    padding: 16px 8px;
+    font-size: 20px;
+  }
+
+  
 
   footer{
     flex-direction: row;
