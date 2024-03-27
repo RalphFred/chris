@@ -183,29 +183,44 @@ applyAnimations();
 
 // Hamburger Menu
 const menu = document.querySelector('#menu');
+const mobileNavLink = document.querySelectorAll(".nav--mobile a");
+
+const openMenu = () => {
+  menu.classList.remove("burger--menu");
+  menu.classList.add("open--menu");
+  gsap.to(".nav--mobile", .75, {
+    x: "-100%",
+  });
+  gsap.from(".nav--mobile a", .75, {
+    y: "100%",
+    stagger: .2,
+    delay: .75,
+    opacity: 0,
+  });
+  document.body.style.overflow = "hidden"
+}
+
+const closeMenu = () => {
+  menu.classList.remove("open--menu");
+  menu.classList.add("burger--menu");
+  gsap.to(".nav--mobile", 2, {
+    x: "100%",
+  })
+  document.body.style.overflow = ""
+}
 
 menu.addEventListener('click', () => {
   if (menu.classList == "burger--menu") {
-    menu.classList.remove("burger--menu");
-    menu.classList.add("open--menu");
-    gsap.to(".nav--mobile", .75, {
-      x: "-100%",
-    });
-    gsap.from(".nav--mobile li", .75, {
-      y: "100%",
-      stagger: .2,
-      delay: .75,
-      opacity: 0,
-    });
-    document.body.style.overflow = "hidden"
+    openMenu();
   } else if (menu.classList == "open--menu"){
-    menu.classList.remove("open--menu");
-    menu.classList.add("burger--menu");
-    gsap.to(".nav--mobile", 2, {
-      x: "100%",
-    })
-    document.body.style.overflow = ""
-  }
+    closeMenu();
+  } 
+})
+
+mobileNavLink.forEach(link => {
+  link.addEventListener('click', () => {
+    closeMenu();
+  })
 })
 
 // Submit Form

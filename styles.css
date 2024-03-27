@@ -20,6 +20,11 @@
   scroll-behavior: smooth;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -179,9 +184,10 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 9;
 }
 
-.nav--mobile li{
+.nav--mobile a{
   padding: 8px;
   margin-bottom: 18px;
   font-size: 20px;
@@ -189,7 +195,7 @@ nav{
   font-weight: 900;
 }
 
-.nav--mobile li:last-child{
+.nav--mobile a:last-child{
   margin-bottom: 0;
 }
 
@@ -774,17 +780,17 @@ footer{
     font-size: 18px;
   }
 
-  .nav--desktop li{
+  .nav--desktop a{
     padding: 8px;
     margin: 0 12px;
     font-weight: 800;
   }
 
-  .nav--desktop li:nth-child(1){
+  .nav--desktop a:nth-child(1){
     margin-left: 0;
   }
 
-  .nav--desktop li:last-child{
+  .nav--desktop a:last-child{
     margin-right: 0;
   }
 
